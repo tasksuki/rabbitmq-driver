@@ -1,0 +1,37 @@
+{
+    "name": "tasksuki/rabbitmq-driver",
+    "type": "library",
+    "description": "Tasksuki RabbitmqDriver Component",
+    "keywords": ["rabbitmq-driver", "tasksuki"],
+    "homepage": "https://tasksuki.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aurimas Niekis",
+            "email": "aurimas@niekis.lt"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "tasksuki/driver": "dev-master",
+        "php-amqplib/php-amqplib": "~2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": { "Tasksuki\\Component\\RabbitmqDriver\\": "src" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Tasksuki\\Component\\RabbitmqDriver\\Test\\": "tests" }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-ci": "vendor/bin/phpunit -c phpunit.xml.ci"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
